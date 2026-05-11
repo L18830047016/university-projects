@@ -1,0 +1,7 @@
+# 可执行文件
+*.exe
+
+# IDE配置
+.vscode/
+.idea/
+*.out

@@ -28,6 +28,7 @@ void createTree(BiTree *T){
     }
 }
 
+//结合队列计算二叉树的WPL值
 int WPL(BiTree T){
     if(T==NULL){
         return 0;

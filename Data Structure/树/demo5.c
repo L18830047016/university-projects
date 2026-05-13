@@ -49,7 +49,8 @@ int WPL(BiTree T){
 
             BiTree curr=queue[front];
             front++;
-
+            
+            //仅计算叶子节点
             if(curr->left==NULL&&curr->right==NULL){
                 wpl+=depth*curr->weight;
             }

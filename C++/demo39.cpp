@@ -16,6 +16,7 @@ void sell_ticket(const string &name){
     Sleep(20);
     // 自动锁unique_lock比lock_guard更灵活，但性能稍慢
     unique_lock<mutex> locker(mtx);
+    //类        类模板  对象名 向构造函数传递的参数
     if(ticket<=0){
       break;
     }    

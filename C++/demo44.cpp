@@ -9,22 +9,32 @@ mutex mtx1,mtx2;
 
 void func1(){
     cout<<"t1执行"<<endl;
-    lock_guard<mutex> locker1(mtx1);
+    mtx1.lock();
+    //lock_guard<mutex> locker1(mtx1);
     cout<<"t1锁住了mtx1"<<endl;
     Sleep(100); // 增加死锁机会
     // 尝试获取mtx2
-    lock_guard<mutex> locker2(mtx2);
+    mtx2.lock();
+    //lock_guard<mutex> locker2(mtx2);
     cout<<"t1锁住了mtx2"<<endl;
+
+    mtx1.unlock();
+    mtx2.unlock();
 }
 
 void func2(){
     cout<<"t2执行"<<endl;
-    lock_guard<mutex> locker2(mtx2);
+    mtx2.lock();
+    //lock_guard<mutex> locker(mtx2);
     cout<<"t2锁住了mtx2"<<endl;
     Sleep(100); // 增加死锁机会
     // 尝试获取mtx1
-    lock_guard<mutex> locker1(mtx1);
+    mtx1.lock();
+    //lock_guard<mutex> locker(mtx1);
     cout<<"t2锁住了mtx1"<<endl;
+
+    mtx1.unlock();
+    mtx2.unlock();
 }
 
 int main(){

@@ -20,3 +20,5 @@ VSCode纯软件环境
 VScode纯软件环境；GBK编码注释
 ## 4.2demo目录：
 [![demo目录](./C++/demo目录.png)](./C++/demo目录.png)
+# 5 Linux编程学习记录
+[L18830047016/Linux-demo: 通过Linux理解进程、线程、内存、文件描述符等底层原理过程中写的demo](https://github.com/L18830047016/Linux-demo)
